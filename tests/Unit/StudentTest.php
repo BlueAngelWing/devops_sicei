@@ -13,7 +13,6 @@ class StudentTest extends TestCase
     {
 
         $respone = $this->call('GET','/api/students',[]);
-        dd( $respone);
-        $this->assertStatus($respone->status(),200);
+        $respone->assertStatus($respone->status(),200);
     }
 }
